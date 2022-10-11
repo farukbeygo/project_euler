@@ -27,8 +27,9 @@ for numb in range(100000, 1000000):
 #it is very unefficient code, i know but it works
 for palindrome in palindrome_list:
     for i in hund_to_tou:
-        for j in hund_to_tou:
-            if i*j == palindrome:
-                div_palindrome.append(palindrome)
-                
+        if palindrome not in div_palindrome:  
+            for j in hund_to_tou:
+                if i*j == palindrome:
+                    div_palindrome.append(palindrome)
+                    
 print(max(div_palindrome))
