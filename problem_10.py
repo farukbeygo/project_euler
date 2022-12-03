@@ -1,4 +1,6 @@
 """
+"The following problem is taken from Project Euler."
+
 The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
 
 Find the sum of all the primes below two million.
@@ -20,4 +22,4 @@ while max(prime_list)<2000000:
     if flag:
         prime_list.append(i)
 
-print(sum(prime_list)-max(prime_list))
+
