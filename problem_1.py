@@ -1,29 +1,24 @@
 """
-If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9.
-The sum of these multiples is 23.
+If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
 
 Find the sum of all the multiples of 3 or 5 below 1000.
 """
 
-#I'll collect all elements 1 to 1000 in a one list
-num_list = []
+# I'll write a function that return sum of multiples of 3 or 5 for the given number
 
-for i in range(1, 1000):
-    num_list.append(i)
-
-#now we can take them in a another 3_divisor and 5_divisor lists
-divided_3 = []
-divided_5 = []
-divided_15 = []
-
-for num in num_list:
-    if num%3 == 0:
-        divided_3.append(num)
-    elif num%5 == 0 :
-        divided_5.append(num)
-    elif num%15 == 0 :
-        divided_15.append(num)
-    
-#now we can calculate the sum
-total_sum = sum(divided_3) + sum(divided_5) - sum(divided_15)
-print(total_sum)
+def mul_sum(x):
+    # I will calculate the sum with a loop
+    mulSum = 0
+    n3 = 3
+    n5 = 5
+    n15 = 15
+    while x>n3:
+        mulSum+=n3
+        n3+=3
+    while x>n5:
+        mulSum+=n5
+        n5+=5
+    while x>n15:
+        mulSum-=n15
+        n15+=15
+    return mulSum
